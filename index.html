@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Reservation System</title>
+  <link rel="stylesheet" href="style.css">
+   <style>
+    body {
+    background-image: url('bande-bharat-express-train.jpg'); /* Sets background for the entire page */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-size:contain; /* Makes the image cover the entire background */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome Back 👋</h1>
+    <p>Please login to your account to book or manage reservations.</p>
+    <form onsubmit="login(event)">
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <label>
+        <input type="checkbox" id="remember"> Remember Me
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <a href="#">Forgot Password?</a><br>
+    <a href="#" onclick="register()">Create New Account</a>
+    <footer>© 2025 Oasis Reservation System</footer>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if(user && pass){
+        alert("✅ Login Successful! Welcome, " + user);
+       window.location.href = 'home.html';
+      } else {
+        alert("❌ Please enter both username and password.");
+      }
+    }
+
+    function register(){
+      alert("Registration feature coming soon!");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel Ticket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cancel Reservation ❌</h1>
+    <p>Enter your PNR number to cancel the booking.</p>
+
+    <form onsubmit="cancelTicket(event)">
+      <input type="text" id="pnr" placeholder="Enter PNR Number" required>
+      <input type="text" id="reason" placeholder="Reason for Cancellation (optional)">
+      <button type="submit">Cancel Ticket</button>
+    </form>
+
+    <a href="reserve.html">Back to Reservation</a><br>
+    <a href="index.html">Logout</a>
+    <footer>© 2025 Oasis Reservation System</footer>
+  </div>
+
+  <script>
+    function cancelTicket(event){
+      event.preventDefault();
+      const pnr = document.getElementById('pnr').value;
+      alert("✅ Ticket with PNR " + pnr + " has been cancelled successfully!");
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
