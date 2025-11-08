@@ -38,7 +38,7 @@ Online reservation system/
 ---
 
 ## 📸 Preview
-*(Add screenshot of your homepage if you want)*
+
 ![Website Screenshot](bande-bharat-express-train.jpg)
 
 ---
